@@ -1,18 +1,14 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
 /client/verb/wiki()
-	set name = "wiki"
+	set name = "Wiki"
 	set desc = "Visit the wiki."
 	set hidden = 1
-	if( config.wikiurl )
-		if(alert("This will open the wiki in your browser. Are you sure?",,"Yes","No")=="No")
-			return
-		src << link(config.wikiurl)
-	else
-		src << "\red The wiki URL is not set in the server configuration."
-	return
+	if(alert("This will open the wiki in your browser. Are you sure?",,"Yes","No")=="No")
+		return
+	src << link("http://baystation12.net/wiki/")
 
 /client/verb/forum()
-	set name = "forum"
+	set name = "Forum"
 	set desc = "Visit the forum."
 	set hidden = 1
 	if( config.forumurl )
@@ -27,9 +23,9 @@
 	set name = "Rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-	if(alert("This will open the forum in your browser. Are you sure?",,"Yes","No")=="No")
+	if(alert("This will open the forum rules page in your browser. Are you sure?",,"Yes","No")=="No")
 		return
-	src << link( "http://dawn-gaming.enjin.com/forum/m/25513836/viewthread/14347944-official-server-rules")
+	src << link("http://dawn-gaming.enjin.com/forum/m/25513836/viewthread/14347944-official-server-rules")
 
 /client/verb/hotkeys_help()
 	set name = "hotkeys-help"
