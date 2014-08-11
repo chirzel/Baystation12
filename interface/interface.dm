@@ -23,13 +23,13 @@
 		src << "\red The forum URL is not set in the server configuration."
 	return
 
-#define RULES_FILE "config/rules.html"
 /client/verb/rules()
 	set name = "Rules"
 	set desc = "Show Server Rules."
 	set hidden = 1
-	src << browse(file(RULES_FILE), "window=rules;size=480x320")
-#undef RULES_FILE
+	if(alert("This will open the forum in your browser. Are you sure?",,"Yes","No")=="No")
+		return
+	src << link( "http://dawn-gaming.enjin.com/forum/m/25513836/viewthread/14347944-official-server-rules")
 
 /client/verb/hotkeys_help()
 	set name = "hotkeys-help"
