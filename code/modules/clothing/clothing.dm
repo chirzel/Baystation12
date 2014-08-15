@@ -36,9 +36,9 @@
 	switch(target_species)
 		if("Human", "Skrell")	//humanoid bodytypes
 			species_restricted = list("exclude","Unathi","Tajaran","Diona","Vox")
-		else 
+		else
 			species_restricted = list(target_species)
-	
+
 	if (sprite_sheets_obj && (target_species in sprite_sheets_obj))
 		icon = sprite_sheets_obj[target_species]
 
@@ -48,9 +48,9 @@
 			species_restricted = list("exclude","Unathi","Tajaran","Diona","Vox")
 		if("Human")
 			species_restricted = list("exclude","Skrell","Unathi","Tajaran","Diona","Vox")
-		else 
+		else
 			species_restricted = list(target_species)
-	
+
 	if (sprite_sheets_obj && (target_species in sprite_sheets_obj))
 		icon = sprite_sheets_obj[target_species]
 
@@ -237,7 +237,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/suit/space
 	name = "Space suit"
-	desc = "A suit that protects against low pressure environments. \"NSS EXODUS\" is written in large block letters on the back."
+	desc = "A suit that protects against low pressure environments. \"NSS DAWN\" is written in large block letters on the back."
 	icon_state = "space"
 	item_state = "s_suit"
 	w_class = 4//bulky item

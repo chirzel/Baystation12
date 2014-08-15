@@ -106,19 +106,19 @@ VOX HEIST ROUNDTYPE
 		vox.f_style = "Shaved"
 		for(var/datum/organ/external/limb in vox.organs)
 			limb.status &= ~(ORGAN_DESTROYED | ORGAN_ROBOT)
-		
+
 		//Now apply cortical stack.
-		var/datum/organ/external/E = vox.get_organ("head")	
+		var/datum/organ/external/E = vox.get_organ("head")
 		var/obj/item/weapon/implant/cortical/I = new(vox)
 		I.imp_in = vox
 		I.implanted = 1
 		I.part = E
 		E.implants += I
 		cortical_stacks += I
-		
+
 		vox.equip_vox_raider()
 		vox.regenerate_icons()
-		
+
 		raider.objectives = raid_objectives
 		greet_vox(raider)
 
@@ -173,7 +173,7 @@ VOX HEIST ROUNDTYPE
 
 /datum/game_mode/heist/proc/greet_vox(var/datum/mind/raider)
 	raider.current << "\blue <B>You are a Vox Raider, fresh from the Shoal!</b>"
-	raider.current << "\blue The Vox are a race of cunning, sharp-eyed nomadic raiders and traders endemic to the frontier and much of the unexplored galaxy. You and the crew have come to the Exodus for plunder, trade or both."
+	raider.current << "\blue The Vox are a race of cunning, sharp-eyed nomadic raiders and traders endemic to the frontier and much of the unexplored galaxy. You and the crew have come to the Dawn for plunder, trade or both."
 	raider.current << "\blue Vox are cowardly and will flee from larger groups, but corner one or find them en masse and they are vicious."
 	raider.current << "\blue Use :V to voxtalk, :H to talk on your encrypted channel, and don't forget to turn on your nitrogen internals!"
 	raider.current << "\red IF YOU HAVE NOT PLAYED A VOX BEFORE, REVIEW THIS THREAD: http://baystation12.net/forums/viewtopic.php?f=6&t=8657."
